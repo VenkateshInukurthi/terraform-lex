@@ -1,5 +1,5 @@
 resource "aws_instance" "test" {
-    ami = lookup(var.AWS_REGION, var.AMIS)
+    ami = lookup(var.AMIS, var.AWS_REGION)
     instance_type = "t3.micro"
   
 }
